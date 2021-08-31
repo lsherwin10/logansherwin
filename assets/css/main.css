@@ -1,0 +1,109 @@
+/* variables for entire file */
+:root {
+    --bg: linear-gradient(#c9c9c9, #555555);
+    /* --block2: linear-gradient(#555555, #282828);
+    --block3: linear-gradient(#282828, #000000) */
+}
+
+/* affects all html in the file */
+html *
+{
+   font-family: 'Monaco', monospace;
+   font-weight: 100;
+}
+
+/* affects the body block only */
+body {
+  background: var(--bg) no-repeat center center fixed; 
+}
+
+/* all headings and paragraph */
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* container class for div */
+.container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 25px;
+  padding-bottom: 20px;
+}
+
+html
+
+/* topnav class for div, used for navigation bar */
+.topnav {
+    position: sticky;
+    height: 70px;
+    padding-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    top: 10px;
+    background-color: rgba(205, 205, 205, 0.7);
+    box-shadow: 0 0 .5em .1em rgba(0, 0, 0, .2);
+    border-radius: 10px;
+  }
+  
+  /* All types of links inside navigation bar */
+  .topnav a {
+    float: right;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    margin-left: 3px;
+    margin-right: 3px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 28px;
+    border-radius: 10px;
+    transition: background-color 0.5s;
+  }
+
+  /* Only page buttons inside navigation bar (excludes name title) */
+  .topnav a.page {
+    transform: translate(0, 10%);
+    text-align: center;
+    /* transition: background-color 0.25s; */
+  }
+
+  /* Only title button in navigation bar */
+  .topnav a.title {
+    float: left;
+    font-size: 42px !important;
+    text-decoration: none;
+    transform: translate(0, -7%);
+    margin-left: 25px;
+  }
+
+  /* Only title button while hovering */
+  .topnav a.title:hover {
+    background: none;
+  }
+  
+  /* Only page buttons while hovering */
+  .topnav a.page:hover {
+    background-color: #ddd;
+    box-shadow: 2px 2px 0.1em 0.05em #bababa;
+  }
+
+  /* Floating box class for div, used inside body for blocks of text */
+  .floatbox {
+    text-align: center;
+    font-size: 18px;
+    color: white !important;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 0.5em 0.2em rgba(0, 0, 0, 0.2);
+  }
