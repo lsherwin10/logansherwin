@@ -1,6 +1,8 @@
 /* variables for entire file */
 :root {
-    --bg: linear-gradient(#c9c9c9, #555555);
+    /* --bg: linear-gradient(#c9c9c9, #555555); */
+    --bg: white;
+    --accent: rgba(25, 109, 212, 0.7);
     /* --block2: linear-gradient(#555555, #282828);
     --block3: linear-gradient(#282828, #000000) */
 }
@@ -44,9 +46,10 @@ html
     margin-right: 10px;
     margin-bottom: 30px;
     top: 10px;
-    background-color: rgba(205, 205, 205, 0.7);
+    background-color: var(--accent);
     box-shadow: 0 0 .5em .1em rgba(0, 0, 0, .2);
     border-radius: 10px;
+    /* border: 1px solid var(--accent); */
   }
   
   /* All types of links inside navigation bar */
@@ -54,7 +57,7 @@ html
     float: right;
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: white;
     margin-left: 3px;
     margin-right: 3px;
     padding-top: 4px;
@@ -63,14 +66,15 @@ html
     padding-right: 10px;
     font-size: 28px;
     border-radius: 10px;
+    transition: color 0.5s;
     transition: background-color 0.5s;
+    transition: box-shadow 0.5s;
   }
 
   /* Only page buttons inside navigation bar (excludes name title) */
   .topnav a.page {
     transform: translate(0, 10%);
     text-align: center;
-    /* transition: background-color 0.25s; */
   }
 
   /* Only title button in navigation bar */
@@ -90,6 +94,7 @@ html
   /* Only page buttons while hovering */
   .topnav a.page:hover {
     background-color: #ddd;
+    color: black;
     box-shadow: 2px 2px 0.1em 0.05em #bababa;
   }
 
@@ -98,7 +103,7 @@ html
     text-align: center;
     font-size: 18px;
     color: white !important;
-    background: rgba(0, 0, 0, 0.1);
+    background: var(--accent);
     padding: 20px;
     margin-left: 200px;
     margin-right: 200px;
