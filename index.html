@@ -10,6 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/nav.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="assets/js/hamburgerClick.js"></script>
+
     <title>Logan Sherwin</title>
 
 </head>
@@ -27,29 +32,34 @@
             </div>
         </div>
     </div>
+    <div class="screen">
+        <header>
+            <a class="target-burger">
+                <ul class="buns">
+                    <li class="bun"></li>
+                    <li class="bun"></li>
+                </ul>
+                <!--buns-->
+            </a>
+            <!--target-burger-->
+        </header>
+        <nav class="main-nav" role="navigation">
+            <ul>
+                <li><a href=""><span>My Account</span></a></li>
+                <li><a href=""><span>Billing Information</span></a></li>
+                <li><a href=""><span>Order Tracker</span></a></li>
+                <li><a href=""><span>Change Password</span></a></li>
+                <li><a href=""><span>Log Out</span></a></li>
+            </ul>
+        </nav>
+    </div>
     <div class="floatbox">
         <span>Coming Soon</span>
     </div>
 
-    <script>
-        (function () {
-            const classes = document.body.classList;
-            let timer = 0;
-            window.addEventListener('resize', function () {
-                if (timer) {
-                    clearTimeout(timer);
-                    timer = null;
-                }
-                else
-                    classes.add('stop-transitions');
+    <!-- This has to be at the bottom of the body tag! -->
+    <script src="assets/js/stopTransitions.js"></script>
 
-                timer = setTimeout(() => {
-                    classes.remove('stop-transitions');
-                    timer = null;
-                }, 100);
-            });
-        })();
-    </script>
 </body>
 
 </html>

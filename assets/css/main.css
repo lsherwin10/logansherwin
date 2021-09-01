@@ -74,13 +74,13 @@ ul.center {
   margin-right: 200px; */
   min-height: 60px;
   margin-bottom: 1.8vw;
-  /* border: 1px solid var(--accent); */
+  border: 1px solid var(--accent);
 }
 
 .topnav div {
   float: right;
   margin: 0.6vw auto;
-  /* border: 2px solid orange; */
+  border: 2px solid orange;
 }
 
 .topnav div.title {
