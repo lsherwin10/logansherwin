@@ -1,114 +1,184 @@
+/* screen width of 1667 used for measurements for vw */
+
 /* variables for entire file */
+
 :root {
-    /* --bg: linear-gradient(#c9c9c9, #555555); */
-    --bg: white;
-    --accent: rgba(25, 109, 212, 0.7);
-    /* --block2: linear-gradient(#555555, #282828);
-    --block3: linear-gradient(#282828, #000000) */
+  --bg: linear-gradient(to bottom right, #d0d0d0, #ffffff);
+  --accent: rgba(25, 109, 212, 0.7);
 }
 
 /* affects all html in the file */
-html *
-{
-   font-family: 'Monaco', monospace;
-   font-weight: 100;
+
+html {
+  font-family: 'Monaco', monospace;
+  font-weight: 100;
+  background: var(--bg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /* affects the body block only */
+
 body {
-  background: var(--bg) no-repeat center center fixed; 
+  width: 60vw;
+  margin: auto;
+}
+
+body.stop-transitions * {
+  transition: none !important;
 }
 
 /* all headings and paragraph */
+
 h1, h2, h3, h4, h5, h6, p {
   padding: 0px;
   margin: 0px;
 }
 
+p, span {
+  font-size: 1.44vw;
+}
+
+/* unordered lists */
+
+ul {
+  text-align: left;
+  list-style-position: outside;
+}
+
+ul.center {
+  text-align: center;
+  list-style-position: inside;
+}
+
 /* container class for div */
+
 .container {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 30px;
-  padding-right: 25px;
-  padding-bottom: 20px;
+  padding-left: 1.8vw;
+  padding-right: 1.5vw;
+  padding-bottom: 1.2vw;
 }
 
-html
-
 /* topnav class for div, used for navigation bar */
+
 .topnav {
-    position: sticky;
-    height: 70px;
-    padding-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 30px;
-    top: 10px;
-    background-color: var(--accent);
-    box-shadow: 0 0 .5em .1em rgba(0, 0, 0, .2);
-    border-radius: 10px;
-    /* border: 1px solid var(--accent); */
+  position: sticky;
+  height: 4.2vw;
+  /* padding-top: .6vw; */
+  /* margin-left: 200px;
+  margin-right: 200px; */
+  min-height: 60px;
+  margin-bottom: 1.8vw;
+  border: 1px solid var(--accent);
+}
+
+.topnav div {
+  float: right;
+  margin: 0.6vw auto;
+  /* border: 2px solid orange; */
+}
+
+.topnav div.title {
+  float: left;
+  margin: 0.05vw auto !important;
+  /* border: 2px solid orange; */
+}
+
+/* All types of links inside navigation bar */
+
+.topnav a {
+  float: right;
+  text-align: center;
+  text-decoration: none;
+  color: var(--accent);
+  /* margin-left: .18vw;
+  margin-right: .18vw;
+  margin-top: 0.18vw;
+  margin-bottom: 0; */
+  padding-top: .24vw;
+  padding-bottom: .24vw;
+  padding-left: .6vw;
+  padding-right: .6vw;
+  font-size: 28px;
+  border-radius: 10px;
+  transition: color 0.5s;
+  transition: background-color 0.5s;
+  transition: box-shadow 0.5s;
+  transition: font-size 0.5s;
+  /* border: 1px solid green; */
+}
+
+/* Only page buttons inside navigation bar (excludes name title) */
+
+/* .topnav a.page {
+  transform: translate(0, 25%);
+  text-align: center;
+} */
+
+/* Only title button in navigation bar */
+
+.topnav a.title {
+  float: left;
+  font-size: 42px !important;
+  /* transform: translate(0, 2.5%); */
+  /* margin-left: 25px; */
+  /* margin-left: 1.5vw; */
+}
+
+/* Only title button while hovering */
+
+.topnav a.title:hover {
+  background: none;
+}
+
+/* Only page buttons while hovering */
+
+.topnav a.page:hover {
+  background-color: #ddd;
+  font-size: 30px;
+  box-shadow: .12vw .12vw 0.1em 0.05em #bababa;
+}
+
+/* Floating box class for div, used inside body for blocks of text */
+
+.floatbox {
+  text-align: center;
+  color: white !important;
+  background: var(--accent);
+  padding: 1.2vw;
+  margin: 1.2vw auto;
+  border-radius: .6vw;
+  box-shadow: 0 0 0.5em 0.2em rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (min-width: 836px) {
+  /* hide the hamburger */
+  .hamburger {
+    display: none;
   }
-  
-  /* All types of links inside navigation bar */
+  /* show all the nav-buttons */
   .topnav a {
-    float: right;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    margin-left: 3px;
-    margin-right: 3px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 28px;
-    border-radius: 10px;
-    transition: color 0.5s;
-    transition: background-color 0.5s;
-    transition: box-shadow 0.5s;
+    display: block;
   }
+}
 
-  /* Only page buttons inside navigation bar (excludes name title) */
-  .topnav a.page {
-    transform: translate(0, 10%);
-    text-align: center;
+/* if browser window is small (max-width) */
+
+@media only screen and (max-width: 835px) {
+  /* show everything with the hamburger class */
+  .hamburger {
+    display: block;
   }
-
-  /* Only title button in navigation bar */
+  /* hide all the nav-buttons */
+  .topnav a, a.page {
+    display: none;
+  }
   .topnav a.title {
-    float: left;
-    font-size: 42px !important;
-    text-decoration: none;
-    transform: translate(0, -7%);
-    margin-left: 25px;
+    display: block !important;
   }
-
-  /* Only title button while hovering */
-  .topnav a.title:hover {
-    background: none;
-  }
-  
-  /* Only page buttons while hovering */
-  .topnav a.page:hover {
-    background-color: #ddd;
-    color: black;
-    box-shadow: 2px 2px 0.1em 0.05em #bababa;
-  }
-
-  /* Floating box class for div, used inside body for blocks of text */
-  .floatbox {
-    text-align: center;
-    font-size: 18px;
-    color: white !important;
-    background: var(--accent);
-    padding: 20px;
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 0.5em 0.2em rgba(0, 0, 0, 0.2);
-  }
+}

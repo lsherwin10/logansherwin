@@ -5,31 +5,71 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Logan Sherwin</title>
     <meta name="description" content="Logan Sherwin Personal Website">
     <meta name="author" content="Logan Sherwin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="assets/css/main.css">
-    <!-- <link rel="stylesheet" href="assets/header.css"> -->
+    <title>Logan Sherwin</title>
 
 </head>
 
 <body>
     <div class="topnav">
         <!-- Maybe remove link from this? \/ -->
-        <a class="title" href="index.html">Logan Sherwin</a>
-        <a></a>
-        <a class="page" href="/Users/lsherwin/Desktop/New_Resume.pdf" target="_blank">Resume</a>
-        <a class="page" href="contact.html">Contact</a>
-        <a class="page" href="index.html">About</a>
+        <div class="title"><a class="title" href="index.html">Logan Sherwin</a></div>
+        <div>
+            <a class="page" href="/Users/lsherwin/Desktop/New_Resume.pdf" target="_blank">Resume</a>
+            <a class="page" href="contact.html">Contact</a>
+            <a class="page" href="index.html">About</a>
+            <div class="hamburger">
+                hamburger
+            </div>
+        </div>
     </div>
     <div class="floatbox">
-        <h2>Heading 2 Block</h2>
+        <span>To-Do:</span>
+        <ul>
+            <li>See if you can figure out a way to genuinely center the nav bar</li>
+            <li>Use media queries to change padding and widths for different screen sizes instead of shifting everything
+                based on width</li>
+            <li>Fix bounding width for hamburger menu</li>
+            <li>Use a nice-looking hamburger menu</li>
+            <li>Actually add content to pages</li>
+        </ul>
     </div>
     <div class="floatbox">
-        <h4>Heading 4 Block</h4>
+        <span>Span 20px</span>
     </div>
+    <div class="floatbox">
+        <span>Span 20px</span>
+    </div>
+    <div class="floatbox">
+        <span>Span 20px</span>
+    </div>
+    <div class="floatbox">
+        <span>Span 20px</span>
+    </div>
+
+    <script>
+        (function () {
+            const classes = document.body.classList;
+            let timer = 0;
+            window.addEventListener('resize', function () {
+                if (timer) {
+                    clearTimeout(timer);
+                    timer = null;
+                }
+                else
+                    classes.add('stop-transitions');
+
+                timer = setTimeout(() => {
+                    classes.remove('stop-transitions');
+                    timer = null;
+                }, 100);
+            });
+        })();
+    </script>
 </body>
 
 </html>
