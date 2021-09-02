@@ -67,25 +67,37 @@ ul.center {
 /* topnav class for div, used for navigation bar */
 
 .topnav {
+  /* Safari */
+  position: -webkit-sticky;
   position: sticky;
-  height: 4.2vw;
+  height: 70px;
   /* padding-top: .6vw; */
   /* margin-left: 200px;
   margin-right: 200px; */
   min-height: 60px;
-  margin-bottom: 1.8vw;
-  /* border: 1px solid var(--accent); */
+  margin-bottom: 30px;
+  /* border: 1px solid yellow; */
 }
 
-.topnav div {
-  float: right;
-  margin: 0.6vw auto;
+.topnav div.bounds {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid purple; */
+}
+
+.topnav div.pages {
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
   /* border: 2px solid orange; */
 }
 
 .topnav div.title {
-  float: left;
-  margin: 0.05vw auto !important;
+  margin-top: auto;
+  margin-bottom: auto;
   /* border: 2px solid orange; */
 }
 
@@ -93,13 +105,9 @@ ul.center {
 
 .topnav a {
   float: right;
-  text-align: center;
+  /* text-align: center; */
   text-decoration: none;
   color: var(--accent);
-  /* margin-left: .18vw;
-  margin-right: .18vw;
-  margin-top: 0.18vw;
-  margin-bottom: 0; */
   padding-top: .24vw;
   padding-bottom: .24vw;
   padding-left: .6vw;
@@ -123,11 +131,7 @@ ul.center {
 /* Only title button in navigation bar */
 
 .topnav a.title {
-  float: left;
   font-size: 42px !important;
-  /* transform: translate(0, 2.5%); */
-  /* margin-left: 25px; */
-  /* margin-left: 1.5vw; */
 }
 
 /* Only title button while hovering */
@@ -147,11 +151,12 @@ ul.center {
 /* Floating box class for div, used inside body for blocks of text */
 
 .floatbox {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
   color: white !important;
   background: var(--accent);
   padding: 1.2vw;
-  margin: 1.2vw auto;
   border-radius: .6vw;
   box-shadow: 0 0 0.5em 0.2em rgba(0, 0, 0, 0.2);
 }
