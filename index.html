@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="assets/css/main.css">
+
     <title>Logan Sherwin</title>
 
 </head>
@@ -31,25 +32,9 @@
         <span>Coming Soon</span>
     </div>
 
-    <script>
-        (function () {
-            const classes = document.body.classList;
-            let timer = 0;
-            window.addEventListener('resize', function () {
-                if (timer) {
-                    clearTimeout(timer);
-                    timer = null;
-                }
-                else
-                    classes.add('stop-transitions');
+    <!-- This has to be at the bottom of the body tag! -->
+    <script src="assets/js/stopTransitions.js"></script>
 
-                timer = setTimeout(() => {
-                    classes.remove('stop-transitions');
-                    timer = null;
-                }, 100);
-            });
-        })();
-    </script>
 </body>
 
 </html>
