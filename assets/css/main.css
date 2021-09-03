@@ -64,19 +64,27 @@ ul.center {
   padding-bottom: 1.2vw;
 }
 
-/* topnav class for div, used for navigation bar */
-
-.topnav {
-  /* Safari */
-  position: -webkit-sticky;
-  position: sticky;
+/* wrapper for topnav so it can stay fixed at the top of the page
+    without content moving below it at the top */
+.topnav-wrapper {
   height: 70px;
-  /* padding-top: .6vw; */
-  /* margin-left: 200px;
-  margin-right: 200px; */
+  margin-bottom: 20px;
+  /* border: 1px solid red; */
+}
+
+/* topnav class for div, used for navigation bar */
+.topnav {
+  position: fixed;
+  height: 70px;
+  width: 60vw;
   min-height: 60px;
-  margin-bottom: 30px;
   /* border: 1px solid yellow; */
+}
+
+.topnav.scrolled {
+  background-color: #d7d7d7;
+  box-shadow: .12vw .12vw 0.1em 0.05em #bababa;
+  border-radius: .6vw;
 }
 
 .topnav div.bounds {
@@ -105,7 +113,6 @@ ul.center {
 
 .topnav a {
   float: right;
-  /* text-align: center; */
   text-decoration: none;
   color: var(--accent);
   padding-top: .24vw;
@@ -124,8 +131,6 @@ ul.center {
 /* Only page buttons inside navigation bar (excludes name title) */
 
 /* .topnav a.page {
-  transform: translate(0, 25%);
-  text-align: center;
 } */
 
 /* Only title button in navigation bar */
