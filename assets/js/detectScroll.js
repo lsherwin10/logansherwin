@@ -1,7 +1,7 @@
 function amountScrolled() {
     var scrollTop = $(window).scrollTop();
 
-    var navElements = document.getElementsByClassName("topnav");
+    var navElements = document.getElementsByClassName("bounds");
     if (navElements.length != undefined) {
         if (scrollTop > 20) {
             for (i = 0; i < navElements.length; i++) {

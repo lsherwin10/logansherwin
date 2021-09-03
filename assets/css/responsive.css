@@ -1,0 +1,41 @@
+@media screen and (max-width: 1025px) {
+    body {
+        width: 85vw;
+    }
+    p, span {
+        font-size: 20px;
+    }
+    .topnav {
+        width: 85vw;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    body {
+        width: 90vw;
+    }
+    p, span {
+        font-size: 16px;
+    }
+    .topnav-wrapper {
+        /* red */
+        margin-bottom: 70px;
+    }
+    .topnav {
+        /* yellow */
+        width: 90vw;
+    }
+    .topnav div.bounds {
+        /* purple */
+        flex-direction: column;
+        padding-bottom: 4px;
+    }
+    .topnav div.pages {
+        /* orange */
+        margin: auto;
+    }
+    .topnav div.title {
+        /* green */
+        margin: auto;
+    }
+}
