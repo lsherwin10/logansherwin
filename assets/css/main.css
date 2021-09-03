@@ -2,7 +2,7 @@
 
 :root {
   --bg: linear-gradient(to bottom right, #d0d0d0, #ffffff);
-  --accent: rgba(25, 109, 212, 0.7);
+  --accent: #196dd4b3;
   --body-width: 70vw;
 }
 
