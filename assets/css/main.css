@@ -24,6 +24,10 @@ body {
   width: var(--body-width);
   min-width: 375px;
   margin: auto;
+  padding-top: 16px;
+  padding-left: max(16px, env(safe-area-inset-left));
+  padding-right: max(16px, env(safe-area-inset-right));
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 body.stop-transitions * {
@@ -71,6 +75,7 @@ ul.center {
   height: 70px;
   min-width: 375px;
   margin-bottom: 20px;
+  padding-top: env(safe-area-inset-top);
   /* border: 1px solid red; */
 }
 
