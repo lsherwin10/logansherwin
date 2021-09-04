@@ -60,12 +60,24 @@ ul.center {
 /* container class for div */
 
 .container {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 30px;
-  padding-right: 25px;
-  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+div.img-wrapper {
+  margin: 20px auto;
+}
+
+img {
+  width: 175px;
+  height: 175px;
+  object-fit: cover;
+  transition: all 0.5s;
+}
+
+img:hover {
+  width: 190px;
+  height: 190px;
 }
 
 /* wrapper for topnav so it can stay fixed at the top of the page
@@ -114,6 +126,8 @@ ul.center {
 .topnav div.title {
   margin-top: auto;
   margin-bottom: auto;
+  font-size: 42px;
+  color: var(--accent);
   /* border: 2px solid green; */
 }
 
@@ -127,12 +141,9 @@ ul.center {
   padding-bottom: 4px;
   padding-left: 10px;
   padding-right: 10px;
-  font-size: 28px;
+  font-size: 32px;
   border-radius: 10px;
-  transition: color 0.5s;
-  transition: background-color 0.5s;
-  transition: box-shadow 0.5s;
-  transition: font-size 0.5s;
+  transition: all 0.5s;
   /* border: 1px solid green; */
 }
 
@@ -157,7 +168,7 @@ ul.center {
 
 .topnav a.page:hover {
   background-color: #ddd;
-  font-size: 30px;
+  font-size: 36px;
   box-shadow: 2px 2px 0.1em 0.05em #bababa;
 }
 
@@ -169,7 +180,7 @@ ul.center {
   margin-bottom: 20px;
   color: white !important;
   background: var(--accent);
-  padding: 20px;
+  padding: 40px;
   border-radius: 10px;
   box-shadow: 0 0 0.5em 0.2em rgba(0, 0, 0, 0.2);
 }
