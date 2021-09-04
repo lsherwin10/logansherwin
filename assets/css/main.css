@@ -120,6 +120,8 @@ img {
 .topnav div.title {
   margin-top: auto;
   margin-bottom: auto;
+  font-size: 42px;
+  color: var(--accent);
   /* border: 2px solid green; */
 }
 
@@ -133,7 +135,7 @@ img {
   padding-bottom: 4px;
   padding-left: 10px;
   padding-right: 10px;
-  font-size: 28px;
+  font-size: 32px;
   border-radius: 10px;
   transition: color 0.5s;
   transition: background-color 0.5s;
@@ -163,7 +165,7 @@ img {
 
 .topnav a.page:hover {
   background-color: #ddd;
-  font-size: 30px;
+  font-size: 36px;
   box-shadow: 2px 2px 0.1em 0.05em #bababa;
 }
 
@@ -175,10 +177,7 @@ img {
   margin-bottom: 20px;
   color: white !important;
   background: var(--accent);
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 40px;
   border-radius: 10px;
   box-shadow: 0 0 0.5em 0.2em rgba(0, 0, 0, 0.2);
 }
