@@ -9,6 +9,10 @@
         width: 150px;
         height: 150px;
     }
+    img:hover {
+        width: 165px;
+        height: 165px;
+    }
     .topnav {
         width: 85vw;
     }
@@ -24,6 +28,10 @@
     img {
         width: 125px;
         height: 125px;
+    }
+    img:hover {
+        width: 140px;
+        height: 140px;
     }
     .topnav-wrapper {
         /* red */
