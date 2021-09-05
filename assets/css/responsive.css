@@ -1,15 +1,19 @@
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1000px) {
     body {
         width: 85vw;
     }
     p, span {
         font-size: 20px;
     }
-    img {
+    img.photo {
+        width: 225px;
+        height: 225px;
+    }
+    img.icon {
         width: 150px;
         height: 150px;
     }
-    img:hover {
+    img.icon:hover {
         width: 165px;
         height: 165px;
     }
@@ -25,11 +29,15 @@
     p, span {
         font-size: 16px;
     }
-    img {
+    img.photo {
+        width: 200px;
+        height: 200px;
+    }
+    img.icon {
         width: 125px;
         height: 125px;
     }
-    img:hover {
+    img.icon:hover {
         width: 140px;
         height: 140px;
     }
