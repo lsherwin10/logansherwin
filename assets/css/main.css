@@ -73,7 +73,7 @@ img {
   object-fit: cover;
 }
 
-img.photo {
+.photo {
   width: 250px;
   height: 250px;
   border-radius: 20px;
