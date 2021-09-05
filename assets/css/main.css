@@ -22,7 +22,7 @@ html {
 
 body {
   width: var(--body-width);
-  min-width: 375px;
+  min-width: 525px;
   margin: auto;
   padding-top: 16px;
   padding-left: max(16px, env(safe-area-inset-left));
@@ -62,20 +62,30 @@ ul.center {
 .container {
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
 div.img-wrapper {
-  margin: 20px auto;
+  margin: auto;
 }
 
 img {
+  object-fit: cover;
+}
+
+img.photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+}
+
+img.icon {
   width: 175px;
   height: 175px;
-  object-fit: cover;
   transition: all 0.5s;
 }
 
-img:hover {
+img.icon:hover {
   width: 190px;
   height: 190px;
 }
@@ -85,7 +95,7 @@ img:hover {
 
 .topnav-wrapper {
   height: 70px;
-  min-width: 375px;
+  min-width: 525px;
   margin-bottom: 20px;
   padding-top: env(safe-area-inset-top);
   /* border: 1px solid red; */
@@ -96,7 +106,7 @@ img:hover {
 .topnav {
   position: fixed;
   height: 70px;
-  min-width: 375px;
+  min-width: 525px;
   width: var(--body-width);
   min-height: 60px;
   /* border: 1px solid yellow; */
@@ -128,7 +138,7 @@ img:hover {
   margin-bottom: auto;
   margin-left: 10px;
   font-size: 42px;
-  color: var(--accent);
+  color: black;
   /* border: 2px solid green; */
 }
 
@@ -137,7 +147,7 @@ img:hover {
 .topnav a {
   float: right;
   text-decoration: none;
-  color: var(--accent);
+  color: black;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 10px;
@@ -148,21 +158,10 @@ img:hover {
   /* border: 1px solid green; */
 }
 
-/* Only page buttons inside navigation bar (excludes name title) */
-
-/* .topnav a.page {
-} */
-
 /* Only title button in navigation bar */
 
 .topnav a.title {
   font-size: 42px !important;
-}
-
-/* Only title button while hovering */
-
-.topnav a.title:hover {
-  background: none;
 }
 
 /* Only page buttons while hovering */
