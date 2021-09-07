@@ -177,6 +177,7 @@ img.icon:hover {
 .floatbox {
   display: flex;
   justify-content: center;
+  text-align: center;
   margin-bottom: 20px;
   color: white !important;
   background: var(--accent);
