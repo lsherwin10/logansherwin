@@ -10,7 +10,7 @@
 html {
   font-family: 'Open Sans', sans-serif;
   font-weight: 100;
-  background-color: #f2f2f2;
+  background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -121,8 +121,8 @@ img.icon:hover {
 }
 
 .topnav div.bounds.scrolled {
-  background-color: #ededed;
-  box-shadow: 0 0 0.5em 0.3em rgba(0, 0, 0, 0.2);
+  background-color: #1f1f1f;
+  box-shadow: 0 0 0.5em 0.3em rgba(255, 255, 255, 0.2);
   border-radius: 10px;
 }
 
@@ -146,7 +146,7 @@ img.icon:hover {
   margin-bottom: auto;
   margin-left: 10px;
   font-size: 46px;
-  color: black;
+  color: white;
   /* border: 2px solid green; */
 }
 
@@ -155,7 +155,7 @@ img.icon:hover {
 .topnav a {
   float: right;
   text-decoration: none;
-  color: black;
+  color: white;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 10px;
@@ -180,7 +180,8 @@ img.icon:hover {
   text-align: center;
   margin-bottom: 20px;
   color: white !important;
-  background: var(--accent);
+  /* background: var(--accent); */
+  background-color: #1f1f1f;
   padding: 40px;
   border-radius: 10px;
 }
