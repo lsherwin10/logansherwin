@@ -185,3 +185,27 @@ img.icon:hover {
   padding: 40px;
   border-radius: 10px;
 }
+
+a.degree:link {
+  color: gray;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a.degree:visited {
+  color: gray;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a.degree:hover {
+  color: gray;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a.degree:active {
+  color: gray;
+  background-color: transparent;
+  text-decoration: underline;
+}
