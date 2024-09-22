@@ -1,0 +1,255 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    {\Huge \scshape Logan Sherwin} \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\ 724-771-3142 $|$ \href{mailto:lsherwin@uchicago.edu}{\raisebox{-0.2\height}\  \underline{lsherwin@uchicago.edu}} $|$ 
+    \href{https://linkedin.com/in/logan-sherwin/}{\raisebox{-0.2\height}\ \underline{linkedin.com/in/logan-sherwin}}  $|$
+    \href{https://github.com/lsherwin10}{\raisebox{-0.2\height}\ \underline{github.com/lsherwin10}} $|$ \href{https://logansherwin.com/}{\raisebox{-0.2\height}\ \underline{logansherwin.com}}
+    \vspace{-8pt}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Chicago}{Sep. 2019 -- Jun. 2023}
+    %   {M.S. in Computer Science $\mid$ B.S. in Computer Science, Machine Learning Specialization}{Chicago, IL}
+      {Joint B.S./M.S. in Computer Science, Machine Learning Specialization}{Chicago, IL}
+  \resumeSubHeadingListEnd
+  \vspace{-6pt} \small GPA: 3.82/4.00 \\
+  \vspace{-1pt} \small Honors: 2021-22 Dean's List \vspace{-8pt}
+
+%------RELEVANT COURSEWORK-------
+\section{Relevant Coursework}
+    %\resumeSubHeadingListStart
+        \begin{multicols}{5}
+            \begin{itemize}[itemsep=-5pt, parsep=3pt]
+                \item\small Algorithms
+                \item Comp Architecture
+                \item Computer Security
+                \item Computer Vision
+                \item Databases
+                \item Ethics \& Privacy
+                \item HCI
+                \item Machine Learning
+                \item Networks
+                \item Robotics
+                
+            \end{itemize}
+        \end{multicols}
+        \vspace*{2.0\multicolsep}
+    %\resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+  
+  \resumeSubheading
+      {Amazon}{Jun. 2022 -- Sep. 2022}
+      {Software Development Engineer Intern}{Seattle, WA}
+      \resumeItemListStart
+        \resumeItem{Implemented a new core operator for an internal service for customers to access AWS SageMaker inference endpoints}
+        \resumeItem{Handled customer requests passing through the platform by building and executing requests from our service to the AWS SageMaker endpoint through a non-blocking IO system written in Java}
+        \resumeItem{Processed response data from the endpoint and converted it to the platform's query language as output}
+        \resumeItem{Allowed customers to implement calls to SageMaker models for inference in their business logic}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {SESCO Enterprises, LLC}{Jun. 2021 -- Sep. 2021}
+      {Quantitative Developer Intern}{Chicago, IL}
+      \resumeItemListStart
+        \resumeItem{Developed a simulation engine to estimate the fair values of Financial Transmission Rights, an auctioned options and obligations market for wholesale electricity}
+        \resumeItem{Centered around analyzing the behavior of market participants for correlated auctions and assets}
+        \resumeItem{Implemented backtesting for the model, accounting for price elasticity}
+        \resumeItem{Written in Python, with extensions in Nim for optimizing the program's numerical algorithms}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {University of Chicago -- Department of Computer Science}{Mar. 2021 -- Jun. 2021}
+      {Teaching Assistant}{Chicago, IL}
+      \resumeItemListStart
+        \resumeItem{Guided over 100 student’s learning in an introductory computer science course by leading lab sessions and solving problems that arose in their code}
+        \resumeItem{Held office hours to support students in their learning and provide feedback on their code}
+        \resumeItem{Assessed student performance on graded assignments as a member of a ten-person staff team}
+    \resumeItemListEnd
+    
+    \resumeSubheading
+      {University of Chicago -- Housing \& Residence Life}{Sep. 2020 -- Present}
+      {Resident Assistant}{Chicago, IL}
+      \resumeItemListStart
+        \resumeItem{Supported over 70 residents both mentally and emotionally through their college experience}
+        \resumeItem{Helped organize events within the group to build a cohesive group of individuals}
+        \resumeItem{Created a safe and open environment for students as a member of a four-person staff team}
+    \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+\vspace{-16pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Diving Pose Estimation}{}}{Aug. 2022 -- Sep. 2022}
+          \resumeItemListStart
+            \resumeItem{Implemented pose estimation using the OpenCV Python package to identify joints and compute joint angles of a diver}
+            \resumeItem{Overlayed joint angles at a given video frame to show the angles at a given moment during the dive}
+            \resumeItem{Wrote new sequence of frames with angle and pose overlays to disk for divers to observe after analysis}
+          \resumeItemListEnd
+          \vspace{-13pt}
+          \resumeProjectHeading
+          {\textbf{Schedule Generator}{}}{Jun. 2021 -- Aug. 2021}
+      \resumeItemListStart
+            \resumeItem{Implemented an interval scheduling algorithm in Python to determine the best arrangement of employees by week} 
+            \resumeItem{Considered availability of workers and prioritized shift distribution based on seniority}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+\vspace{-15pt}
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Java, SQL, C++, Swift, Nim, JavaScript, Standard ML} \\
+     \textbf{Technologies/Frameworks}{: SciPy Stack, Git, MongoDB, AWS, PostgreSQL} \\
+     \textbf{Techniques}{: CNNs, RNNs, SVMs, Naive Bayes, OOP} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+%-----------INVOLVEMENT---------------
+\section{Extracurriculars}
+    \resumeSubHeadingListStart
+        \resumeSubheading{Alpha Kappa Psi Business Fraternity}{Jan 2022 -- Present}{}{} \vspace{-13.5pt}
+        \resumeSubheading{College Varsity Swimming and Diving Team -- Captain}{Oct 2019 -- Present}{}{}
+    \resumeSubHeadingListEnd
+
+
+\end{document}
