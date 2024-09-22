@@ -172,6 +172,18 @@ img.icon:hover {
   font-size: 40px;
 }
 
+.topnav a.page:link {
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.topnav a.page:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
 /* Floating box class for div, used inside body for blocks of text */
 
 .floatbox {
@@ -186,25 +198,25 @@ img.icon:hover {
   border-radius: 10px;
 }
 
-a.degree:link {
+a:link {
   color: gray;
   background-color: transparent;
   text-decoration: none;
 }
 
-a.degree:visited {
+a:visited {
   color: gray;
   background-color: transparent;
   text-decoration: none;
 }
 
-a.degree:hover {
+a:hover {
   color: gray;
   background-color: transparent;
   text-decoration: underline;
 }
 
-a.degree:active {
+a:active {
   color: gray;
   background-color: transparent;
   text-decoration: underline;
