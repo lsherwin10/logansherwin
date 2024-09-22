@@ -1,4 +1,4 @@
 .DS_Store
 *.aux
-resume/*
+assets/files/resume/*
 !resume.tex
