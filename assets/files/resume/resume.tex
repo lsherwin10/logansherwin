@@ -19,9 +19,6 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{fontawesome5}
-\usepackage{multicol}
-\setlength{\multicolsep}{-3.0pt}
-\setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
 
 
@@ -66,6 +63,10 @@
 
 %-------------------------
 % Custom commands
+\newcommand{\resumeHeading}[1]{
+  \section{\uppercase{#1}}
+}
+
 \newcommand{\resumeItem}[1]{
   \item\small{
     {#1 \vspace{-2pt}}
@@ -94,8 +95,8 @@
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & \textbf{\small #2}\\
     \end{tabular*}\vspace{-7pt}
 }
@@ -108,7 +109,9 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1pt}}
+
+\newcommand\+{\raisebox{0.35ex}{\tiny +}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -117,148 +120,134 @@
 \begin{document}
 
 %----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
-
+% \begin{center}
+%     {\Huge \scshape Logan Sherwin} \\ \vspace{1pt}
+%     \small \raisebox{-0.1\height}\ 724-771-3142 $|$
+%     \href{mailto:lsherwin10@gmail.com}{\raisebox{-0.2\height}\  \underline{lsherwin10@gmail.com}} $|$ 
+%     \href{https://linkedin.com/in/logan-sherwin/}{\raisebox{-0.2\height}\ \underline{linkedin.com/in/logan-sherwin}}  $|$
+%     \href{https://github.com/lsherwin10}{\raisebox{-0.2\height}\ \underline{github.com/lsherwin10}} $|$
+%     \href{https://logansherwin.com/}{\raisebox{-0.2\height}\ \underline{logansherwin.com}}
+%     \vspace{-2pt}
+% \end{center}
 \begin{center}
-    {\Huge \scshape Logan Sherwin} \\ \vspace{1pt}
-    \small \raisebox{-0.1\height}\ 724-771-3142 $|$ \href{mailto:lsherwin10@gmail.com}{\raisebox{-0.2\height}\  \underline{lsherwin10@gmail.com}} $|$ 
-    \href{https://linkedin.com/in/logan-sherwin/}{\raisebox{-0.2\height}\ \underline{linkedin.com/in/logan-sherwin}}  $|$
-    \href{https://github.com/lsherwin10}{\raisebox{-0.2\height}\ \underline{github.com/lsherwin10}} $|$ \href{https://logansherwin.com/}{\raisebox{-0.2\height}\ \underline{logansherwin.com}}
-    \vspace{-8pt}
+  {\Huge \scshape Logan Sherwin} \\ \vspace{2pt}
+  \small \raisebox{-0.1\height}\ 724-771-3142 $|$
+  \href{mailto:lsherwin10@gmail.com}{\raisebox{-0.2\height}\  \underline{lsherwin10@gmail.com}} $|$
+  \href{https://logansherwin.com/}{\raisebox{-0.2\height}\ \underline{logansherwin.com}}
+  \vspace{-2pt}
 \end{center}
 
 
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {University of Chicago}{Sep. 2019 -- Jun. 2023}
-    %   {M.S. in Computer Science $\mid$ B.S. in Computer Science, Machine Learning Specialization}{Chicago, IL}
-      {Joint B.S./M.S. in Computer Science, Machine Learning Specialization}{Chicago, IL}
-  \resumeSubHeadingListEnd
-  \vspace{-6pt} \small GPA: 3.82/4.00 \\
-  \vspace{-1pt} \small Honors: 2021-22 Dean's List \vspace{-8pt}
-
-%------RELEVANT COURSEWORK-------
-% \section{Relevant Coursework}
-%     %\resumeSubHeadingListStart
-%         \begin{multicols}{5}
-%             \begin{itemize}[itemsep=-5pt, parsep=3pt]
-%                 \item\small Algorithms
-%                 \item Comp Architecture
-%                 \item Computer Security
-%                 \item Computer Vision
-%                 \item Databases
-%                 \item Ethics \& Privacy
-%                 \item HCI
-%                 \item Machine Learning
-%                 \item Networks
-%                 \item Robotics
-                
-%             \end{itemize}
-%         \end{multicols}
-%         \vspace*{2.0\multicolsep}
-    %\resumeSubHeadingListEnd
-
-
 %-----------EXPERIENCE-----------
-\section{Experience}
+\resumeHeading{Professional Experience}
+  \vspace{-3pt}
   \resumeSubHeadingListStart
-
-  \resumeSubheading
-      {Amazon}{Sep. 2023 -- Present}
-      {Software Development Engineer -- Private Brands Discovery}{Seattle, WA}
+  \item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{Amazon} & \textbf{\small Sep. 2023 -- Present} \\
+      \textit{\small Software Development Engineer II (Apr. 2025 -- Present)} & \textit{\small Seattle, WA} \\
+      \textit{\small Software Development Engineer (Sep. 2023 -- Apr. 2025)} & {} \\
+    \end{tabular*}\vspace{-7pt}
       \resumeItemListStart
-        \resumeItem{Contributed to dozens of projects to support our customers' discovery of Amazon Private Brands \href{https://www.amazon.com/stores/node/20648519011?channel=discovbar?field-lbr_brands_browse-bin=AmazonBasics&ref_=nav_cs_amazonbasics}{\underline{products}}}
-        \resumeItem{Served appropriate substitute recommendations to customers on product detail pages}
-        \resumeItem{Improved dataset generation pipelines to improve its efficiency and increase relevance of product recommendations}
-        \resumeItem{Facilitated multiple compliance and migration projects involving various internal and AWS services}
-        \resumeItem{Mentored a Software Development Engineer Intern throughout Summer 2024, supported his growth and learning in the industry, and guided him to complete his project and subsequently receive a full-time job offer}
+        \resumeItem{Automated a 1.5-day manual auditing process, reducing it to a 2-hour solution using \textbf{Python} on a \textbf{Docker image} running on \textbf{AWS Fargate} and \textbf{Step Functions}, eliminating manual errors and improving scalability}
+        \resumeItem{Supported business teams in building dashboards to track product recommendation irrelevance across all retail marketplaces, reducing search query analysis time from 3 hours to 5 minutes and enabling faster issue resolution}
+        \resumeItem{Re-architected a dataset generation pipeline covering over 2B product mappings, improving job efficiency by 44\% with jobs written in \textbf{Scala} and \textbf{SQL} and executed using \textbf{AWS Elastic MapReduce}, \textbf{SageMaker}, and \textbf{Lambda}}
+        \resumeItem{Migrated a dataset generation pipeline covering 180M\+ products from a regional execution model to a per-marketplace execution, reducing region runtimes by 80\% and enabling clearer root-cause analysis}
+        \resumeItem{Implemented granular monitoring for dataset generation pipelines, increasing the number of \textbf{AWS CloudWatch} alarms by 72\% and managing them via infrastructure-as-code using \textbf{AWS CDK}, improving failure detection and response time}
       \resumeItemListEnd
   
   \resumeSubheading
       {Amazon}{Jun. 2022 -- Sep. 2022}
       {Software Development Engineer Intern}{Seattle, WA}
       \resumeItemListStart
-        \resumeItem{Implemented a new core operator for an internal service for customers to access AWS SageMaker inference endpoints}
-        \resumeItem{Handled customer requests passing through the platform by building and executing requests from our service to the AWS SageMaker endpoint through a non-blocking IO system written in Java}
-        \resumeItem{Processed response data from the endpoint and converted it to the platform's query language as output}
-        \resumeItem{Allowed customers to implement calls to SageMaker models for inference in their business logic}
+        \resumeItem{Developed a new core operator for an internal service handling 20M\+ requests per second, enabling customers to access their \textbf{AWS SageMaker} inference endpoints for machine learning predictions}
+        \resumeItem{Built and executed non-blocking I/O requests in \textbf{Java}, enabling seamless integration with SageMaker endpoints}
+        \resumeItem{Transformed response data into the platform’s query language in under 20ms, improving query efficiency}
+        \resumeItem{Integrated SageMaker models into customer business logic, enabling low-latency inference}
       \resumeItemListEnd
 
     \resumeSubheading
       {SESCO Enterprises, LLC}{Jun. 2021 -- Sep. 2021}
       {Quantitative Developer Intern}{Pittsburgh, PA}
       \resumeItemListStart
-        \resumeItem{Developed a simulation engine to estimate the fair values of Financial Transmission Rights, an auctioned options and obligations market for wholesale electricity}
-        \resumeItem{Centered around analyzing the behavior of market participants for correlated auctions and assets}
-        \resumeItem{Implemented backtesting for the model, accounting for price elasticity}
-        \resumeItem{Written in Python, with extensions in Nim for optimizing the program's numerical algorithms}
+        \resumeItem{Developed a high-performance simulation engine in \textbf{Python} with \textbf{Nim} extensions to efficiently estimate fair values of Financial Transmission Rights, a critical auction-based market for optimizing wholesale electricity trading strategies}
+        \resumeItem{Implemented backtesting to validate model predictions, cutting analysis time from 2 days to 3 minutes}
       \resumeItemListEnd
-
-    \resumeSubheading
-      {University of Chicago -- Department of Computer Science}{Mar. 2021 -- Jun. 2021}
-      {Teaching Assistant}{Chicago, IL}
-      \resumeItemListStart
-        \resumeItem{Guided over 100 student’s learning in an introductory computer science course by leading lab sessions and solving problems that arose in their code}
-        \resumeItem{Held office hours to support students in their learning and provide feedback on their code}
-        \resumeItem{Assessed student performance on graded assignments as a member of a ten-person staff team}
-    \resumeItemListEnd
     
   \resumeSubHeadingListEnd
-\vspace{-16pt}
+\vspace{-14pt}
 
 %-----------PROJECTS-----------
-\section{Projects}
-    \vspace{-5pt}
+\resumeHeading{Personal Projects}
     \resumeSubHeadingListStart
-    \resumeProjectHeading
-      {\textbf{Adrenaline Recruiting}{}}{Feb. 2023 -- Aug. 2024}
-      \resumeItemListStart
-        \resumeItem{Developed an iOS app alongside my college teammate to help high-school divers display their skills to college recruiters}
-        \resumeItem{Reached out to diving coaches to understand their needs when recruiting athletes to join their varsity teams}
-        \resumeItem{Integrated with DiveMeets.com to compute proprietary statistics and metrics for athletes}
-        \resumeItem{Functioned as the lead engineer on the project, ensuring high-quality contributions across all engineers}
-      \resumeItemListEnd
-      \vspace{-13pt}
-      \resumeProjectHeading
-          {\textbf{Diving Pose Estimation}{}}{Aug. 2022 -- Sep. 2022}
-          \resumeItemListStart
-            \resumeItem{Implemented pose estimation using the OpenCV Python package to identify joints and compute joint angles of a diver}
-            \resumeItem{Overlayed joint angles at a given video frame to show the angles at a given moment during the dive}
-            \resumeItem{Wrote new sequence of frames with angle and pose overlays to disk for divers to observe after analysis}
-          \resumeItemListEnd
-      % \resumeProjectHeading
-      %     {\textbf{Schedule Generator}{}}{Jun. 2021 -- Aug. 2021}
-      %     \resumeItemListStart
-      %       \resumeItem{Implemented an interval scheduling algorithm in Python to determine the best arrangement of employees by week} 
-      %       \resumeItem{Considered availability of workers and prioritized shift distribution based on seniority}
-      %     \resumeItemListEnd
-    \resumeSubHeadingListEnd
-\vspace{-15pt}
 
+    \resumeProjectHeading
+      {\textbf{Adrenaline Recruiting}}{Feb. 2023 -- Aug. 2024}
+      \resumeItemListStart
+        \resumeItem{Developed an iOS app using \textbf{Swift} and a web app using \textbf{React} and \textbf{TypeScript}, providing users with access to 100,000\+ past dive meets and algorithm-based tools for creating optimal competition lists and real-time results}
+        % \resumeItem{Integrated with DiveMeets.com to compute proprietary athlete metrics across 100,000\+ competitions}
+        \resumeItem{Built a cloud-based platform using \textbf{AWS Amplify}, \textbf{DynamoDB}, and \textbf{AppSync} for seamless data access, integrated \textbf{AWS Lambda} and \textbf{Pinpoint} for real-time messaging, and utilized \textbf{Rekognition} for identity verification}
+      \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\textbf{Path Tracing Rendering Engine}}{May 2023}
+        \resumeItemListStart
+          \resumeItem{Developed a \textbf{C\+\+} path-tracing engine to simulate realistic light behavior in illuminated scenes}
+          \resumeItem{Accelerated matrix operations using the system's \textbf{GPU}, improving rendering speed by 93\% and making real-time path tracing more feasible}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\vspace{-14pt}
+
+%-----------EDUCATION-----------
+\resumeHeading{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Chicago}{Sep. 2019 -- Jun. 2023}
+      {Joint B.S./M.S. in Computer Science, Machine Learning Specialization}{Chicago, IL}
+  \resumeSubHeadingListEnd
+  \vspace{-4pt} \small GPA: 3.82/4.00 \\
+  \vspace{1pt} \small Dean's List (2021-22) \vspace{-3pt}
+
+
+% ------RELEVANT COURSEWORK-------
+\resumeHeading{Relevant Coursework}
+\newcommand{\colspace}{33.5pt} % Column spacing
+\newcommand{\bulletspace}{5pt} % Space between bullet and text
+\newcommand{\bulletstyle}{\raisebox{0.35ex}{\tiny$\bullet$}\hspace{\bulletspace}} % Bullet with adjustable spacing
+
+\begin{center}
+    \begin{tabular}{l@{\hspace{\colspace}} l@{\hspace{\colspace}} l@{\hspace{\colspace}} l}
+        \bulletstyle Advanced C\+\+ & 
+        \bulletstyle Computer Architecture & 
+        \bulletstyle Human-Computer Interaction & 
+        \bulletstyle Computer Security \\
+        \bulletstyle Computer Vision & 
+        \bulletstyle Databases & 
+        \bulletstyle Ethics \& Privacy & 
+        \bulletstyle Networks \\
+        % \bulletstyle Robotics & Machine Learning & & \\
+    \end{tabular}
+\end{center}
 
 %
 %-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages: }{Python, Java, Scala, TypeScript, SQL, C++, Swift, Nim} \\
-     \textbf{Technologies/Frameworks: }{AWS, SciPy Stack, Git, MongoDB, PostgreSQL} \\
-    }}
- \end{itemize}
- \vspace{-16pt}
+% \section{Technical Skills}
+%  \begin{itemize}[leftmargin=0.15in, label={}]
+%     \small{\item{
+%      \textbf{Languages: }{Python, Java, Scala, JavaScript/TypeScript, SQL, C/C++, Swift, Nim} \\
+%      \textbf{Technologies/Frameworks: }{AWS, MongoDB, PostgreSQL} \\
+%     }}
+%  \end{itemize}
+%  \vspace{-16pt}
 
 
 %-----------INVOLVEMENT---------------
-\section{Extracurriculars}
-    \resumeSubHeadingListStart
-        \resumeSubheading{Alpha Kappa Psi Business Fraternity}{Jan. 2022 -- Jun. 2023}{}{} \vspace{-13.5pt}
-        \resumeSubheading{College Varsity Swimming and Diving Team -- Captain}{Oct. 2019 -- Jun. 2023}{}{}
-    \resumeSubHeadingListEnd
+% \section{Extracurriculars}
+%     \resumeSubHeadingListStart
+%         \resumeSubheading{Alpha Kappa Psi Business Fraternity}{Jan. 2022 -- Jun. 2023}{}{} \vspace{-13.5pt}
+%         \resumeSubheading{College Varsity Swimming and Diving Team -- Captain}{Oct. 2019 -- Jun. 2023}{}{}
+%     \resumeSubHeadingListEnd
 
 
 \end{document}
