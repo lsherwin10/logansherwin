@@ -5,12 +5,8 @@ import { ButtonPrimary, ButtonOutline } from "./Button";
 
 const Hero = () => {
   return (
-    <section
-      id="home"
-      className="pt-28 lg:pt-36"
-    >
+    <section id="home" className="pt-28 lg:pt-36">
       <div className="container items-center lg:grid lg:grid-cols-2 lg:gap-10">
-        
         <div>
           {/* Name */}
           <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-2">
@@ -18,26 +14,15 @@ const Hero = () => {
           </h2>
 
           {/* Subheadings with reduced margins */}
-          <p className="headline-sub mb-1">
-            University of Chicago Student
-          </p>
-          <p className="headline-sub mb-6">
-            Aspiring Software Engineer
-          </p>
+          <p className="headline-sub mb-1">Software Engineer</p>
+          <p className="headline-sub mb-1">BS/MS in Computer Science</p>
+          <p className="headline-sub mb-6">University of Chicago 2023</p>
 
           {/* Buttons */}
           <div className="flex items-center gap-3">
             <a href="/files/Logan Sherwin Resume.pdf" download>
-              <ButtonPrimary
-                label="Download Resume"
-                icon="download"
-              />
+              <ButtonPrimary label="Download Resume" icon="download" />
             </a>
-            <ButtonOutline
-              href="#about"
-              label="Scroll down"
-              icon="arrow_downward"
-            />
           </div>
         </div>
 
@@ -53,7 +38,6 @@ const Hero = () => {
             />
           </figure>
         </div>
-
       </div>
     </section>
   );
