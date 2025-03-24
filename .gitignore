@@ -2,3 +2,4 @@
 *.aux
 assets/files/resume/*
 !resume.tex
+node_modules
