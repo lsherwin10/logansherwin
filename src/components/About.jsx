@@ -13,11 +13,11 @@ const experienceYears =
     : 0);
 const aboutItems = [
   {
-    label: "Programming Languages",
+    label: 'Programming Languages',
     number: 8,
   },
   {
-    label: "Years of Experience",
+    label: 'Years of Experience',
     number: experienceYears,
   },
 ];

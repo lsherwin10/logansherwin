@@ -6,64 +6,64 @@
 /**
  * Components
  */
-import SkillCard from "./SkillCard";
+import SkillCard from './SkillCard';
 
 const skillItem = [
   {
-    imgSrc: "/images/python.svg",
-    label: "Python",
-    desc: "Programming Language",
+    imgSrc: '/images/python.svg',
+    label: 'Python',
+    desc: 'Programming Language',
   },
   {
-    imgSrc: "/images/typescript.svg",
-    label: "TypeScript",
-    desc: "Programming Language",
+    imgSrc: '/images/typescript.svg',
+    label: 'TypeScript',
+    desc: 'Programming Language',
   },
   {
-    imgSrc: "/images/java.svg",
-    label: "Java",
-    desc: "Programming Language",
+    imgSrc: '/images/java.svg',
+    label: 'Java',
+    desc: 'Programming Language',
   },
   {
-    imgSrc: "/images/scala.svg",
-    label: "Scala",
-    desc: "Programming Language",
+    imgSrc: '/images/scala.svg',
+    label: 'Scala',
+    desc: 'Programming Language',
   },
   {
-    imgSrc: "/images/cpp.svg",
-    label: "C++",
-    desc: "Programming Language",
+    imgSrc: '/images/cpp.svg',
+    label: 'C++',
+    desc: 'Programming Language',
   },
   {
-    imgSrc: "/images/swift.svg",
-    label: "Swift",
-    desc: "Programming Language",
+    imgSrc: '/images/swift.svg',
+    label: 'Swift',
+    desc: 'Programming Language',
   },
 
   {
-    imgSrc: "/images/nim.svg",
-    label: "Nim",
-    desc: "Programming Language",
+    imgSrc: '/images/nim.svg',
+    label: 'Nim',
+    desc: 'Programming Language',
   },
   {
-    imgSrc: "/images/aws.svg",
-    label: "AWS",
-    desc: "Cloud Platform",
+    imgSrc: '/images/aws.svg',
+    label: 'AWS',
+    desc: 'Cloud Platform',
   },
   {
-    imgSrc: "/images/sql.svg",
-    label: "SQL",
-    desc: "Database Language",
+    imgSrc: '/images/sql.svg',
+    label: 'SQL',
+    desc: 'Database Language',
   },
   {
-    imgSrc: "/images/spark.svg",
-    label: "Apache Spark",
-    desc: "Framework",
+    imgSrc: '/images/spark.svg',
+    label: 'Apache Spark',
+    desc: 'Framework',
   },
   {
-    imgSrc: "/images/git.svg",
-    label: "Git",
-    desc: "Version Control",
+    imgSrc: '/images/git.svg',
+    label: 'Git',
+    desc: 'Version Control',
   },
 ];
 

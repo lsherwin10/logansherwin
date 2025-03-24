@@ -3,13 +3,11 @@
  * @license Apache-2.0
  */
 
-
 /**
  * Node modules
  */
-import { useRef, useEffect } from "react";
-import PropTypes from "prop-types";
-
+import { useRef, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 const Navbar = ({ navOpen }) => {
   const lastActiveLink = useRef();
@@ -20,7 +18,7 @@ const Navbar = ({ navOpen }) => {
     activeBox.current.style.left = lastActiveLink.current.offsetLeft + 'px';
     activeBox.current.style.width = lastActiveLink.current.offsetWidth + 'px';
     activeBox.current.style.height = lastActiveLink.current.offsetHeight + 'px';
-  }
+  };
 
   useEffect(initActiveBox, []);
   window.addEventListener('resize', initActiveBox);
@@ -34,62 +32,57 @@ const Navbar = ({ navOpen }) => {
     activeBox.current.style.left = event.target.offsetLeft + 'px';
     activeBox.current.style.width = event.target.offsetWidth + 'px';
     activeBox.current.style.height = event.target.offsetHeight + 'px';
-  }
+  };
 
   const navItems = [
     {
       label: 'Home',
       link: '#home',
       className: 'nav-link active',
-      ref: lastActiveLink
+      ref: lastActiveLink,
     },
     {
       label: 'About',
       link: '#about',
-      className: 'nav-link'
+      className: 'nav-link',
     },
     {
       label: 'Work',
       link: '#work',
-      className: 'nav-link'
+      className: 'nav-link',
     },
     {
       label: 'Courses',
       link: '#reviews',
-      className: 'nav-link'
+      className: 'nav-link',
     },
     {
       label: 'Contact',
       link: '#contact',
-      className: 'nav-link md:hidden'
-    }
+      className: 'nav-link md:hidden',
+    },
   ];
 
   return (
     <nav className={'navbar ' + (navOpen ? 'active' : '')}>
-      {
-        navItems.map(({ label, link, className, ref }, key) => (
-          <a
-            href={link}
-            key={key}
-            ref={ref}
-            className={className}
-            onClick={activeCurrentLink}
-          >
-            {label}
-          </a>
-        ))
-      }
-      <div
-        className="active-box"
-        ref={activeBox}
-      ></div>
+      {navItems.map(({ label, link, className, ref }, key) => (
+        <a
+          href={link}
+          key={key}
+          ref={ref}
+          className={className}
+          onClick={activeCurrentLink}
+        >
+          {label}
+        </a>
+      ))}
+      <div className="active-box" ref={activeBox}></div>
     </nav>
-  )
-}
+  );
+};
 
 Navbar.propTypes = {
-  navOpen: PropTypes.bool.isRequired
-}
+  navOpen: PropTypes.bool.isRequired,
+};
 
-export default Navbar
+export default Navbar;
