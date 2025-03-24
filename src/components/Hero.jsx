@@ -14,7 +14,7 @@ const Hero = () => {
         <div>
           {/* Name */}
           <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-2">
-            Spencer Dearman
+            Logan Sherwin
           </h2>
 
           {/* Subheadings with reduced margins */}
@@ -27,9 +27,9 @@ const Hero = () => {
 
           {/* Buttons */}
           <div className="flex items-center gap-3">
-            <a href="/files/spencer-dearman-resume.pdf" download>
+            <a href="/files/Logan Sherwin Resume.pdf" download>
               <ButtonPrimary
-                label="Download CV"
+                label="Download Resume"
                 icon="download"
               />
             </a>
@@ -48,7 +48,7 @@ const Hero = () => {
               src="/images/hero-banner.png"
               width={656}
               height={800}
-              alt="Henry Clark"
+              alt="Logan Sherwin"
               className="w-full"
             />
           </figure>

@@ -26,7 +26,7 @@ const About = () => {
 
         <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12 reveal-up">
           <p className="text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[60ch]">
-            Welcome! I&apos;m Spencer Dearman, a third-year BS/MS Computer Science student at the University of Chicago. I have a strong interest in low-level programming and operating systems, and I’m always eager to learn how things work. I enjoy tackling challenging problems and combining my technical skills with a hands-on approach to build efficient, real-world solutions.
+            Welcome! I&apos;m Logan Sherwin, a third-year BS/MS Computer Science student at the University of Chicago. I have a strong interest in low-level programming and operating systems, and I’m always eager to learn how things work. I enjoy tackling challenging problems and combining my technical skills with a hands-on approach to build efficient, real-world solutions.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 md:gap-7">
