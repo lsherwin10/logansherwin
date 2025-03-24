@@ -1,47 +1,35 @@
 import { Dispatch, SetStateAction, useEffect } from "react";
-import { menuBg } from "./common";
 
-interface Props {
-  menuOpen: boolean;
-  setMenuOpen: Dispatch<SetStateAction<boolean>>;
-}
-
-export const Navbar: React.FC<Props> = ({ menuOpen, setMenuOpen }) => {
+export const Navbar: React.FC<{
+  navOpen: boolean;
+  setNavOpen: Dispatch<SetStateAction<boolean>>;
+}> = ({ navOpen, setNavOpen }) => {
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
-  }, [menuOpen]);
+    document.body.style.overflow = navOpen ? "hidden" : "";
+  }, [navOpen]);
 
   return (
-    <nav
-      className={`fixed top-0 w-full z-40 ${menuBg} backdrop-blur-lg border-b border-white/10 shadow-lg`}
-    >
-      <div className="max-w-5xl mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
-          <a href="#home" className="font-mono text-xl font-bold text-white">
-            logan<span className="text-blue-500">.tech</span>{" "}
-          </a>
-
+    <nav className={`navbar ${navOpen ? "active" : ""}`}>
+      <div className="max-w-5xl mx-auto">
+        <div className="flex justify-between items-center">
           <div
-            className="w-7 h-5 relative cursor-pointer z-40 md:hidden"
-            onClick={() => setMenuOpen((prev) => !prev)}
+            className={`md:flex items-center space-x-4 ${
+              navOpen ? "" : "hidden"
+            }`}
           >
-            &#9776;
-          </div>
-
-          <div className="hidden md:flex items-center space-x-8">
-            <MenuLink href="#home" onClick={() => setMenuOpen(false)}>
+            <MenuLink href="#home" setNavOpen={setNavOpen}>
               Home
             </MenuLink>
 
-            <MenuLink href="#about" onClick={() => setMenuOpen(false)}>
+            <MenuLink href="#about" setNavOpen={setNavOpen}>
               About
             </MenuLink>
 
-            <MenuLink href="#projects" onClick={() => setMenuOpen(false)}>
+            <MenuLink href="#projects" setNavOpen={setNavOpen}>
               Projects
             </MenuLink>
 
-            <MenuLink href="#contact" onClick={() => setMenuOpen(false)}>
+            <MenuLink href="#contact" setNavOpen={setNavOpen}>
               Contact
             </MenuLink>
           </div>
@@ -53,14 +41,14 @@ export const Navbar: React.FC<Props> = ({ menuOpen, setMenuOpen }) => {
 
 const MenuLink: React.FC<{
   href: string;
-  onClick: () => void;
+  setNavOpen: Dispatch<SetStateAction<boolean>>;
   children: React.ReactNode;
-}> = ({ href, onClick, children }) => {
+}> = ({ href, setNavOpen, children }) => {
   return (
     <a
       href={href}
-      className="text-gray-300 hover:text-white transition-colors"
-      onClick={onClick}
+      className="grid items-center h-9 px-4 text-sm font-medium tracking-wide text-zinc-50/50 hover:text-zinc-50 transition-colors"
+      onClick={() => setNavOpen(false)}
     >
       {children}
     </a>

@@ -1,5 +1,3 @@
-export const menuBg = "bg-[rgba(10,10,10,0.8)]";
-
 export const Skill: React.FC<{ key: number; skill: string }> = ({
   key,
   skill,
