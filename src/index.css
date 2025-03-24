@@ -22,10 +22,18 @@ body {
  * TYPOGRAPHY
 \* ---------------------------------- */
 
-.headline-1,
+.headline-1 {
+  @apply max-w-max;
+  background: -webkit-linear-gradient(0deg, #2b7fff, #00d3f2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .headline-2 {
   @apply max-w-max;
   background: -webkit-linear-gradient(0deg, #fafafa, #a1a1aa);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -34,6 +42,7 @@ body {
 .headline-sub {
   @apply max-w-max;
   background: -webkit-linear-gradient(0deg, #fafafa, #a1a1aa);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
