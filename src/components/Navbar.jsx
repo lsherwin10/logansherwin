@@ -9,80 +9,102 @@
 import { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-const Navbar = ({ navOpen }) => {
+const Navbar = ({ navOpen, activeSection }) => {
+  const navItems = [
+    { label: 'Home', link: '#home' },
+    { label: 'About', link: '#about' },
+    { label: 'Work', link: '#work' },
+    { label: 'Courses', link: '#courses' },
+    { label: 'Contact', link: '#contact' },
+  ];
+
   const lastActiveLink = useRef();
   const activeBox = useRef();
 
   const initActiveBox = () => {
-    activeBox.current.style.top = lastActiveLink.current.offsetTop + 'px';
-    activeBox.current.style.left = lastActiveLink.current.offsetLeft + 'px';
-    activeBox.current.style.width = lastActiveLink.current.offsetWidth + 'px';
-    activeBox.current.style.height = lastActiveLink.current.offsetHeight + 'px';
+    if (lastActiveLink.current) {
+      activeBox.current.style.top = lastActiveLink.current.offsetTop + 'px';
+      activeBox.current.style.left = lastActiveLink.current.offsetLeft + 'px';
+      activeBox.current.style.width = lastActiveLink.current.offsetWidth + 'px';
+      activeBox.current.style.height =
+        lastActiveLink.current.offsetHeight + 'px';
+      activeBox.current.style.opacity = '1'; // Ensure the active box is visible
+    }
   };
 
-  useEffect(initActiveBox, []);
-  window.addEventListener('resize', initActiveBox);
+  useEffect(() => {
+    // Initialize the active box on mount
+    initActiveBox();
 
-  const activeCurrentLink = (event) => {
-    lastActiveLink.current?.classList.remove('active');
-    event.target.classList.add('active');
-    lastActiveLink.current = event.target;
+    // Update the active box on window resize
+    window.addEventListener('resize', initActiveBox);
+    return () => window.removeEventListener('resize', initActiveBox);
+  }, []);
 
-    activeBox.current.style.top = event.target.offsetTop + 'px';
-    activeBox.current.style.left = event.target.offsetLeft + 'px';
-    activeBox.current.style.width = event.target.offsetWidth + 'px';
-    activeBox.current.style.height = event.target.offsetHeight + 'px';
-  };
+  useEffect(() => {
+    // Update the active box when the active section changes or when scrolling in mobile mode
+    const updateActiveBox = () => {
+      const activeLink = document.querySelector(`a[href="#${activeSection}"]`);
+      if (activeLink) {
+        lastActiveLink.current?.classList.remove('active');
+        activeLink.classList.add('active');
+        lastActiveLink.current = activeLink;
 
-  const navItems = [
-    {
-      label: 'Home',
-      link: '#home',
-      className: 'nav-link active',
-      ref: lastActiveLink,
-    },
-    {
-      label: 'About',
-      link: '#about',
-      className: 'nav-link',
-    },
-    {
-      label: 'Work',
-      link: '#work',
-      className: 'nav-link',
-    },
-    {
-      label: 'Courses',
-      link: '#reviews',
-      className: 'nav-link',
-    },
-    {
-      label: 'Contact',
-      link: '#contact',
-      className: 'nav-link md:hidden',
-    },
-  ];
+        if (activeSection === 'contact' && !navOpen) {
+          // Hide the active box when "Contact" is active and Navbar is not in mobile mode
+          activeBox.current.style.opacity = '0';
+
+          // Set the active box to the section right above "Contact"
+          const previousSection = document.querySelector(`a[href="#courses"]`);
+          if (previousSection) {
+            activeBox.current.style.top = previousSection.offsetTop + 'px';
+            activeBox.current.style.left = previousSection.offsetLeft + 'px';
+            activeBox.current.style.width = previousSection.offsetWidth + 'px';
+            activeBox.current.style.height =
+              previousSection.offsetHeight + 'px';
+          }
+        } else {
+          // Update the active box position and make it visible
+          activeBox.current.style.top = activeLink.offsetTop + 'px';
+          activeBox.current.style.left = activeLink.offsetLeft + 'px';
+          activeBox.current.style.width = activeLink.offsetWidth + 'px';
+          activeBox.current.style.height = activeLink.offsetHeight + 'px';
+          activeBox.current.style.opacity = '1';
+        }
+      }
+    };
+
+    // Call the function initially to update the active box
+    updateActiveBox();
+
+    if (navOpen) {
+      // Attach the scroll event listener in mobile mode
+      window.addEventListener('scroll', updateActiveBox);
+
+      // Cleanup the event listener on unmount or when `navOpen` changes
+      return () => window.removeEventListener('scroll', updateActiveBox);
+    }
+  }, [activeSection, navOpen]);
 
   return (
     <nav className={'navbar ' + (navOpen ? 'active' : '')}>
-      {navItems.map(({ label, link, className, ref }, key) => (
+      {navItems.map(({ label, link }, key) => (
         <a
           href={link}
           key={key}
-          ref={ref}
-          className={className}
-          onClick={activeCurrentLink}
+          className={`nav-link ${label === 'Contact' ? 'md:hidden' : ''}`}
         >
           {label}
         </a>
       ))}
-      <div className="active-box" ref={activeBox}></div>
+      <div ref={activeBox} className="active-box"></div>
     </nav>
   );
 };
 
 Navbar.propTypes = {
   navOpen: PropTypes.bool.isRequired,
+  activeSection: PropTypes.string.isRequired,
 };
 
 export default Navbar;

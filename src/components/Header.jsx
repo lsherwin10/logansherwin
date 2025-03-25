@@ -13,7 +13,7 @@ import { useState } from 'react';
  */
 import Navbar from './Navbar';
 
-const Header = () => {
+const Header = ({ activeSection }) => {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
@@ -40,7 +40,7 @@ const Header = () => {
             </span>
           </button>
 
-          <Navbar navOpen={navOpen} />
+          <Navbar navOpen={navOpen} activeSection={activeSection} />
         </div>
 
         <a
