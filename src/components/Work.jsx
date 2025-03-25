@@ -10,6 +10,21 @@ import ProjectCard from './ProjectCard';
 
 const works = [
   {
+    imgSrc: '/images/amazon.svg',
+    title: 'Recommendation Relevance Monitoring',
+    tags: ['Amazon Web Services', 'Scala', 'Python'],
+  },
+  {
+    imgSrc: '/images/amazon.svg',
+    title: 'Data Pipeline Marketplace Migration',
+    tags: ['Amazon Web Services', 'Scala', 'MapReduce'],
+  },
+  {
+    imgSrc: '/images/amazon.svg',
+    title: 'Data Ingestion Pipeline Optimization',
+    tags: ['Amazon Web Services', 'Scala', 'SQL', 'MapReduce'],
+  },
+  {
     imgSrc: '/images/project-1.jpg',
     title: 'Adrenaline iOS App',
     tags: ['Amazon Web Services', 'Swift', 'React', 'TypeScript'],
