@@ -22,14 +22,16 @@ import CourseTile from './CourseTile';
 
 // Example array of courses with full names and course codes
 const courses = [
-  { courseName: 'Systems Programming I', courseCode: 'CMSC 14300' },
-  { courseName: 'Systems Programming II', courseCode: 'CMSC 14400' },
-  { courseName: 'Discrete Mathematics', courseCode: 'CMSC 27100' },
-  { courseName: 'Theory of Algorithms', courseCode: 'CMSC 27200' },
-  { courseName: 'Operating Systems', courseCode: 'CMSC 23000' },
-  { courseName: 'Foundations of Networks', courseCode: 'CMSC 23200' },
+  { courseName: 'Advanced C++', courseCode: 'MPCS 51045' },
+  { courseName: 'Computer Vision', courseCode: 'CMSC 25040' },
   { courseName: 'Computer Architecture', courseCode: 'CMSC 22240' },
-  { courseName: 'Machine Learning for Systems', courseCode: 'CMSC 25422' },
+  { courseName: 'Networks', courseCode: 'CMSC 23320' },
+  { courseName: 'Databases', courseCode: 'MPCS 53001' },
+  { courseName: 'Human-Computer Interaction', courseCode: 'CMSC 20300' },
+  { courseName: 'Ethics & Privacy', courseCode: 'CMSC 25910' },
+  { courseName: 'Computer Security', courseCode: 'MPCS 56511' },
+  { courseName: 'Robotics', courseCode: 'CMSC 20600' },
+  { courseName: 'Object-Oriented Programming', courseCode: 'MPCS 51050' },
 ];
 
 const Review = () => {
@@ -46,7 +48,7 @@ const Review = () => {
   });
 
   return (
-    <section id="reviews" className="section overflow-hidden">
+    <section id="courses" className="section overflow-hidden">
       <div className="container">
         <h2 className="headline-2 mb-8 reveal-up">Relevant Coursework</h2>
 

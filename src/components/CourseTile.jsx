@@ -8,7 +8,9 @@ import PropTypes from 'prop-types';
 const CourseTile = ({ courseName, courseCode }) => {
   return (
     <div className="bg-zinc-800 p-5 rounded-xl min-w-[320px] flex flex-col items-center justify-center">
-      <p className="text-white text-xl font-semibold">{courseName}</p>
+      <p className="text-white text-xl font-semibold text-center">
+        {courseName}
+      </p>
       <p className="text-zinc-400 text-sm tracking-wider">{courseCode}</p>
     </div>
   );
