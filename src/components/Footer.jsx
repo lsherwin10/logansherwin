@@ -22,7 +22,11 @@ const sitemap = [
     href: '#work',
   },
   {
-    label: 'Contact me',
+    label: 'Courses',
+    href: '#courses',
+  },
+  {
+    label: 'Contact',
     href: '#contact',
   },
 ];
