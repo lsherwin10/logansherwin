@@ -27,23 +27,39 @@ const courses = [
   { courseName: 'Computer Architecture', courseCode: 'CMSC 22240' },
   { courseName: 'Networks', courseCode: 'CMSC 23320' },
   { courseName: 'Databases', courseCode: 'MPCS 53001' },
-  { courseName: 'Human-Computer Interaction', courseCode: 'CMSC 20300' },
   { courseName: 'Ethics & Privacy', courseCode: 'CMSC 25910' },
   { courseName: 'Computer Security', courseCode: 'MPCS 56511' },
-  { courseName: 'Robotics', courseCode: 'CMSC 20600' },
   { courseName: 'Object-Oriented Programming', courseCode: 'MPCS 51050' },
 ];
 
-const Review = () => {
+const Courses = () => {
   useGSAP(() => {
+    const section = document.querySelector('#courses'); // Get the section element
+    const scrubSlide = document.querySelector('.scrub-slide'); // Get the scrolling container
+    const container = document.querySelector('.container'); // Get the container element
+    const scrubSlideWidth = scrubSlide.scrollWidth; // Use scrollWidth to account for the full width, including overflow
+    const containerWidth = container.offsetWidth; // Get the visible width of the container
+    const headerHeight = document.querySelector('header')?.offsetHeight || 0; // Dynamically get the header height
+
+    // Calculate the dynamic padding of the container
+    const containerStyles = window.getComputedStyle(container);
+    const containerPaddingLeft = parseFloat(containerStyles.paddingLeft) || 0;
+    const containerPaddingRight = parseFloat(containerStyles.paddingRight) || 0;
+
+    // Calculate the adjusted scroll distance
+    const adjustedScrollDistance =
+      scrubSlideWidth -
+      (containerWidth - containerPaddingLeft - containerPaddingRight);
+
     gsap.to('.scrub-slide', {
       scrollTrigger: {
-        trigger: '.scrub-slide',
-        start: '-200% 80%',
-        end: '400% 80%',
-        scrub: 3.5,
+        trigger: section,
+        start: `bottom bottom-=${headerHeight * 2}`,
+        end: `top top+=${headerHeight}`,
+        fastScrollEnd: true,
+        scrub: true,
       },
-      x: '-1000',
+      x: `-${adjustedScrollDistance}`,
     });
   });
 
@@ -66,4 +82,4 @@ const Review = () => {
   );
 };
 
-export default Review;
+export default Courses;
