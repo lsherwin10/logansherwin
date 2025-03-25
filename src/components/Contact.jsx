@@ -1,11 +1,11 @@
 /**
- * @copyright 2025 spencerdearman
+ * @copyright 2025 logansherwin
  * @license Apache-2.0
  */
 
 const socialLinks = [
   {
-    href: 'https://github.com/spencerdearman',
+    href: 'https://github.com/lsherwin10',
     icon: (
       <svg
         width="24"
@@ -23,7 +23,7 @@ const socialLinks = [
     alt: 'GitHub',
   },
   {
-    href: 'https://www.linkedin.com/in/spencerdearman',
+    href: 'https://www.linkedin.com/in/logan-sherwin',
     icon: (
       <svg
         width="24"

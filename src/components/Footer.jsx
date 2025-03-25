@@ -1,5 +1,5 @@
 /**
- * @copyright 2025 spencerdearman
+ * @copyright 2025 logansherwin
  * @license Apache-2.0
  */
 
@@ -30,15 +30,11 @@ const sitemap = [
 const socials = [
   {
     label: 'GitHub',
-    href: 'https://github.com/spencerdearman',
+    href: 'https://github.com/lsherwin10',
   },
   {
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/spencerdearman',
-  },
-  {
-    label: 'Instagram',
-    href: 'https://www.instagram.com/spencer_dearm',
+    href: 'https://www.linkedin.com/in/logan-sherwin',
   },
 ];
 
@@ -104,7 +100,7 @@ const Footer = () => {
           </a>
 
           <p className="text-zinc-500 text-sm reveal-up">
-            &copy; 2025 <span className="text-zinc-200">spencerdearman</span>
+            &copy; 2025 <span className="text-zinc-200">logansherwin</span>
           </p>
         </div>
       </div>

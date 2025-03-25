@@ -1,5 +1,5 @@
 /**
- * @copyright 2025 spencerdearman
+ * @copyright 2025 logansherwin
  * @license Apache-2.0
  */
 
