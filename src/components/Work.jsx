@@ -12,13 +12,7 @@ const works = [
   {
     imgSrc: '/images/project-1.jpg',
     title: 'Adrenaline iOS App',
-    tags: [
-      'Amazon Web Services',
-      'Computer Vision',
-      'Swift',
-      'React',
-      'TypeScript',
-    ],
+    tags: ['Amazon Web Services', 'Swift', 'React', 'TypeScript'],
     projectLink: 'https://github.com/spencerdearman/adrenaline-app',
   },
   {
@@ -26,6 +20,18 @@ const works = [
     title: 'Path Tracing Engine',
     tags: ['C++', 'GPU Acceleration'],
     projectLink: 'https://github.com/lsherwin10/path-tracing-engine',
+  },
+  {
+    imgSrc: '/images/project-3.jpg',
+    title: 'Diving Pose Estimation',
+    tags: ['Python', 'Computer Vision'],
+    projectLink: 'https://github.com/lsherwin10/diving-cv',
+  },
+  {
+    imgSrc: '/images/project-4.jpg',
+    title: 'Zillow Web Scraper',
+    tags: ['Python'],
+    projectLink: 'https://github.com/lsherwin10/re-analysis',
   },
 ];
 

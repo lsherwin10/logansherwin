@@ -20,7 +20,7 @@ const ProjectCard = ({ imgSrc, title, tags, projectLink, classes }) => {
         <img src={imgSrc} alt={title} loading="lazy" className="img-cover" />
       </figure>
 
-      <div className="flex items-center justify-between gap-4">
+      <div className="flex items-top justify-between gap-4">
         <div>
           <h3 className="title-1 mb-3">{title}</h3>
 
