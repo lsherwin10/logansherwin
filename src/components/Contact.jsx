@@ -3,6 +3,9 @@
  * @license Apache-2.0
  */
 
+import emailjs from '@emailjs/browser';
+import { useState } from 'react';
+
 const socialLinks = [
   {
     href: 'https://github.com/lsherwin10',
@@ -43,6 +46,30 @@ const socialLinks = [
 ];
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        e.target,
+        import.meta.env.VITE_PUBLIC_KEY
+      )
+      .then(() => {
+        alert('Message sent successfully!');
+        setFormData({ name: '', email: '', message: '' });
+      })
+      .catch(() => {
+        alert('Something went wrong. Please try again.');
+      });
+  };
+
   return (
     <section id="contact" className="section">
       <div className="container lg:grid lg:grid-cols-2 lg:items-stretch">
@@ -68,11 +95,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <form
-          action="https://getform.io/f/bwngmzya"
-          method="POST"
-          className="xl:pl-10 2xl:pl-20"
-        >
+        <form className="xl:pl-10 2xl:pl-20" onSubmit={handleSubmit}>
           <div className="md:grid md:items-center md:grid-cols-2 md:gap-2">
             <div className="mb-4">
               <label htmlFor="name" className="label reveal-up">
@@ -87,6 +110,10 @@ const Contact = () => {
                 required
                 placeholder="Logan Sherwin"
                 className="text-field reveal-up"
+                value={formData.name}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
               />
             </div>
 
@@ -103,6 +130,10 @@ const Contact = () => {
                 required
                 placeholder="email@example.com"
                 className="text-field reveal-up"
+                value={formData.email}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
               />
             </div>
           </div>
@@ -118,6 +149,10 @@ const Contact = () => {
               placeholder="Message"
               required
               className="text-field resize-y min-h-32 max-h-80 reveal-up"
+              value={formData.message}
+              onChange={(e) =>
+                setFormData({ ...formData, message: e.target.value })
+              }
             ></textarea>
           </div>
 
