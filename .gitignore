@@ -1,0 +1,8 @@
+.DS_Store
+*.aux
+assets/files/resume/*
+!resume.tex
+node_modules
+dist
+.env
+.vite
