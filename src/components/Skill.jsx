@@ -66,6 +66,11 @@ const skillItem = [
     desc: 'Framework',
   },
   {
+    imgSrc: '/images/docker.svg',
+    label: 'Docker',
+    desc: 'Platform',
+  },
+  {
     imgSrc: '/images/git.svg',
     label: 'Git',
     desc: 'Version Control',

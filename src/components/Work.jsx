@@ -11,13 +11,18 @@ import ProjectCard from './ProjectCard';
 const works = [
   {
     imgSrc: '/images/amazon.svg',
+    title: 'SageMaker Model Deployment Automation',
+    tags: ['Amazon Web Services', 'Docker', 'Python', 'TypeScript'],
+  },
+  {
+    imgSrc: '/images/amazon.svg',
     title: 'Recommendation Relevance Monitoring',
-    tags: ['Amazon Web Services', 'Scala', 'Python'],
+    tags: ['Amazon Web Services', 'Scala', 'Python', 'TypeScript'],
   },
   {
     imgSrc: '/images/amazon.svg',
     title: 'Data Pipeline Marketplace Migration',
-    tags: ['Amazon Web Services', 'Scala', 'MapReduce'],
+    tags: ['Amazon Web Services', 'Scala', 'MapReduce', 'TypeScript'],
   },
   {
     imgSrc: '/images/amazon.svg',
