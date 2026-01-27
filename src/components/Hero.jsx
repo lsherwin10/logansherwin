@@ -14,7 +14,7 @@ const Hero = () => {
           </h2>
 
           {/* Subheadings with reduced margins */}
-          <p className="headline-sub mb-1">Software Engineer</p>
+          <p className="headline-sub mb-1">Software Engineer at Google</p>
           <p className="headline-sub mb-1">BS/MS in Computer Science</p>
           <p className="headline-sub mb-6">University of Chicago 2023</p>
 

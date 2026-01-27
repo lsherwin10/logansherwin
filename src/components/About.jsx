@@ -30,13 +30,16 @@ const About = () => {
         <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12 reveal-up">
           <p className="text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[60ch]">
             Welcome! I&apos;m Logan Sherwin, a software engineer currently
-            working for Amazon Private Brands in Seattle, WA. I specialize in
-            building scalable data processing systems that streamline
-            operations, improve efficiency, and enhance product recommendations
-            across large-scale retail marketplaces. My core technical interests
-            lie in machine learning, natural language processing, and computer
-            vision, and I am always looking for new opportunities to innovate in
-            these spaces and explore new challenges.
+            working for Google in Seattle, WA, where I work on the BigLake
+            product within Google Cloud Platform (GCP) to support building and
+            maintaining Apache Iceberg lakehouses. Prior to Google, I spent two
+            years at Amazon Private Brands, where I specialized in building
+            scalable data processing systems that streamlined operations,
+            improved efficiency, and enhanced product recommendations across
+            large-scale retail marketplaces. My core technical interests lie in
+            distributed systems, machine learning, natural language processing,
+            and computer vision, and I am always looking for new opportunities
+            to innovate in these spaces and explore new challenges.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 md:gap-7">
