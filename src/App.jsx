@@ -1,5 +1,5 @@
 /**
- * @copyright 2025 logansherwin
+ * @copyright 2026 logansherwin
  * @license Apache-2.0
  */
 
@@ -24,7 +24,6 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Skill from './components/Skill';
 import Work from './components/Work';
-import Courses from './components/Courses';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { useEffect, useState } from 'react';
@@ -140,7 +139,6 @@ const App = () => {
         <About />
         <Skill />
         <Work />
-        <Courses />
         <Contact />
       </main>
       <Footer />

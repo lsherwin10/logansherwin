@@ -1,5 +1,5 @@
 /**
- * @copyright 2025 logansherwin
+ * @copyright 2026 logansherwin
  * @license Apache-2.0
  */
 
@@ -14,7 +14,6 @@ const Navbar = ({ navOpen, activeSection }) => {
     { label: 'Home', link: '#home' },
     { label: 'About', link: '#about' },
     { label: 'Work', link: '#work' },
-    { label: 'Courses', link: '#courses' },
     { label: 'Contact', link: '#contact' },
   ];
 
@@ -55,7 +54,7 @@ const Navbar = ({ navOpen, activeSection }) => {
           activeBox.current.style.opacity = '0';
 
           // Set the active box to the section right above "Contact"
-          const previousSection = document.querySelector(`a[href="#courses"]`);
+          const previousSection = document.querySelector(`a[href="#work"]`);
           if (previousSection) {
             activeBox.current.style.top = previousSection.offsetTop + 'px';
             activeBox.current.style.left = previousSection.offsetLeft + 'px';

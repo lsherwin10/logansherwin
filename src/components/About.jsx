@@ -1,5 +1,5 @@
 /**
- * @copyright 2025 logansherwin
+ * @copyright 2026 logansherwin
  * @license Apache-2.0
  */
 
@@ -29,11 +29,19 @@ const About = () => {
       <div className="container">
         <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12 reveal-up">
           <p className="text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[60ch]">
-            Welcome! I&apos;m Logan Sherwin, a software engineer currently
-            working for Google in Seattle, WA, where I work on the BigLake
-            product within Google Cloud Platform (GCP) to support building and
-            maintaining Apache Iceberg lakehouses. Prior to Google, I spent two
-            years at Amazon Private Brands, where I specialized in building
+            Welcome! I&apos;m Logan Sherwin, a Software Engineer currently
+            working for Google in Seattle, WA, where I work on{' '}
+            <a
+              href="https://cloud.google.com/products/lakehouse"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky-400 hover:no-underline"
+            >
+              Lakehouse for Apache Iceberg
+            </a>{' '}
+            within Google Cloud Platform (GCP) to support open-format lakehouses
+            across compute engines and cloud platforms. Prior to Google, I spent
+            two years at Amazon Private Brands, where I specialized in building
             scalable data processing systems that streamlined operations,
             improved efficiency, and enhanced product recommendations across
             large-scale retail marketplaces. My core technical interests lie in

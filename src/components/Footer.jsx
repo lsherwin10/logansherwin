@@ -1,5 +1,5 @@
 /**
- * @copyright 2025 logansherwin
+ * @copyright 2026 logansherwin
  * @license Apache-2.0
  */
 
@@ -20,10 +20,6 @@ const sitemap = [
   {
     label: 'Work',
     href: '#work',
-  },
-  {
-    label: 'Courses',
-    href: '#courses',
   },
   {
     label: 'Contact',
@@ -104,7 +100,7 @@ const Footer = () => {
           </a>
 
           <p className="text-zinc-500 text-sm reveal-up">
-            &copy; 2025 <span className="text-zinc-200">logansherwin</span>
+            &copy; 2026 <span className="text-zinc-200">logansherwin</span>
           </p>
         </div>
       </div>

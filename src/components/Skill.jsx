@@ -1,5 +1,5 @@
 /**
- * @copyright 2025 logansherwin
+ * @copyright 2026 logansherwin
  * @license Apache-2.0
  */
 
@@ -47,8 +47,23 @@ const skillItem = [
   },
   {
     imgSrc: '/images/aws.svg',
-    label: 'AWS',
+    label: 'Amazon Web Services',
     desc: 'Cloud Platform',
+  },
+  {
+    imgSrc: '/images/gcp.svg',
+    label: 'Google Cloud Platform',
+    desc: 'Cloud Platform',
+  },
+  {
+    imgSrc: '/images/bigquery.svg',
+    label: 'BigQuery',
+    desc: 'Data Platform',
+  },
+  {
+    imgSrc: '/images/iceberg.svg',
+    label: 'Apache Iceberg',
+    desc: 'Data Format',
   },
   {
     imgSrc: '/images/sql.svg',
@@ -73,6 +88,11 @@ const skillItem = [
   {
     imgSrc: '/images/git.svg',
     label: 'Git',
+    desc: 'Version Control',
+  },
+  {
+    imgSrc: '/images/mercurial.svg',
+    label: 'Mercurial',
     desc: 'Version Control',
   },
 ];

@@ -1,5 +1,5 @@
 /**
- * @copyright 2025 logansherwin
+ * @copyright 2026 logansherwin
  * @license Apache-2.0
  */
 
@@ -108,7 +108,7 @@ const Contact = () => {
                 id="name"
                 autoComplete="name"
                 required
-                placeholder="Logan Sherwin"
+                placeholder="John Smith"
                 className="text-field reveal-up"
                 value={formData.name}
                 onChange={(e) =>
